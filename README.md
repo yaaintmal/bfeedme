@@ -1,5 +1,5 @@
 Weekend project, used to store a daily order in sqlite, using n8n for further workflows. Code to use telegram via API included... 
-written with a hot needle, quick n dirty (it works tho'), much refactoring needed, therefor: Beta Mode :3
+written with a hot needle, **quick n dirty** (it works tho'), much refactoring needed, therefor: **Beta Mode :3**
 
 +after cloning add an .env-file to load necessary variables:
 
