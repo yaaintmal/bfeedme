@@ -1,66 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FeedMe Beta 0.1 - {{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        .cat-picture img {
-            display: block;
-            width: auto;
-            height: 33vh;
-            border-radius: 5px;
-            opacity: 0; /* Start with the image hidden */
-            animation: fadeIn 1.5s forwards; /* Apply the fade-in animation */
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a soft border effect */
-        }
-            @keyframes fadeIn {
-            to {
-                opacity: 0.87; /* End with the image fully visible */
-            }
-            }
+      .cat-picture img {
+          display: block;
+          width: auto;
+          height: 33vh;
+          border-radius: 5px;
+          opacity: 0; /* Start with the image hidden */
+          animation: fadeIn 1.5s forwards; /* Apply the fade-in animation */
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a soft border effect */
+      }
+          @keyframes fadeIn {
+          to {
+              opacity: 0.87; /* End with the image fully visible */
+          }
+          }
 
-            .container {
-            max-width: 600px
-            margin: auto;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            }
-              #cat-fact {
-            -webkit-box-shadow: 3px 7px 15px 3px #9C9C9C;
-            box-shadow: 3px 7px 15px 3px #9C9C9C;
-            width: 85%;
-            padding: 4px;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            }
+          .container {
+          max-width: 600px
+          margin: auto;
+          padding: 15px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          }
+            #cat-fact {
+          -webkit-box-shadow: 3px 7px 15px 3px #9C9C9C;
+          box-shadow: 3px 7px 15px 3px #9C9C9C;
+          width: 85%;
+          padding: 4px;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-    <div class="cat-fact" id="container">Super, Deine Bestellung ist auf dem Weg!<br>
-        Vorab einen guten Appetit und vielen Dank für das Nutzen unseres Services</div>
+      <div class="cat-fact" id="container">
+        Super, Deine Bestellung ist auf dem Weg!<br />
+        Vorab einen guten Appetit und vielen Dank für das Nutzen unseres
+        Services
+      </div>
 
-    {% if cat_picture_url %}
-        <div class="cat-picture">
-            <img src="{{ cat_picture_url }}" alt="Cat Picture">
-        </div>
-    {% else %}
-        <p>No cat picture available</p>
-    {% endif %}
-     <div class="cat-fact">{{ cat_fact }}</div>
+      {% if cat_picture_url %}
+      <div class="cat-picture">
+        <img src="{{ cat_picture_url }}" alt="Cat Picture" />
+      </div>
+      {% else %}
+      <p>No cat picture available</p>
+      {% endif %}
+      <div class="cat-fact">{{ cat_fact }}</div>
     </div>
     <form action="/" method="get">
       <button type="submit" class="button">zum Start</button>
     </form>
-
-</body>
+  </body>
 </html>

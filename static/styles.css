@@ -19,9 +19,16 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
   --bs-form-switch-checked-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
   --bs-form-switch-checked-bg-color: #ff07ff; /* Ihre gewünschte Farbe für den aktivierten Zustand */
@@ -68,8 +75,10 @@
 /* Custom CSS to style the active button */
 /* This will override the default btn-outline-primary active state */
 .btn-group .btn.active {
-    background-color: var(--bs-third); /* Same as the default .btn-primary background */
-    color: white;
+  background-color: var(
+    --bs-third
+  ); /* Same as the default .btn-primary background */
+  color: white;
 }
 
 .form-check-input:checked {
@@ -77,140 +86,142 @@
   border-color: #213;
 }
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f9;
-    color: #333;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
 .container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+  text-align: center;
+  color: #333;
 }
 
 /* Form Styles */
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-    margin-top: 10px;
-    color: #777;
-    font-weight: bold;
+  margin-top: 10px;
+  color: #777;
+  font-weight: bold;
 }
 
 input[type="text"],
 textarea,
 select {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: calc(100% - 22px);
-    margin-top: 5px;
-    font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 22px);
+  margin-top: 5px;
+  font-size: 16px;
 }
 
 select {
-    height: calc(100% - 15px);
+  height: calc(100% - 15px);
 }
 
 /* Button Styles */
 button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    height: 7vh;
-    width: 100%;
-    margin-top: 20px;
-    font-size: 18px;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 7vh;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 18px;
 }
 
 button:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 .button1 {
-    transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 
 .button1:hover {
-    background-color: var(--bs-third); /* Orange */
-    color: black;
+  background-color: var(--bs-third); /* Orange */
+  color: black;
 }
 
 /* Polaroid Image Styles */
 div.polaroid {
-    width: auto;
-    height: 15vh;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    justify-content: flex;
-    align-items: center;
+  width: auto;
+  height: 15vh;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-content: flex;
+  align-items: center;
 }
 
 img {
-    width: auto;
-    height: 18vh;
+  width: auto;
+  height: 18vh;
 }
 
 div.container {
-    text-align: center;
-    padding: 5px 10px;
+  text-align: center;
+  padding: 5px 10px;
 }
 
 /* Checkbox Styles */
 .form-check-input:checked {
-    background-color: var(--bs-third);
-    border-color: #213;
-    opacity: 69%;
+  background-color: var(--bs-third);
+  border-color: #213;
+  opacity: 69%;
 }
 
 /* Custom CSS to style the active button */
 /* This will override the default btn-outline-primary active state */
 .btn-group .btn.active {
-    background-color: var(--bs-form-switch-checked-bg-color); /* Same as the default .btn-primary background */
-    color: white;
-    opacity: 69%;
+  background-color: var(
+    --bs-form-switch-checked-bg-color
+  ); /* Same as the default .btn-primary background */
+  color: white;
+  opacity: 69%;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #FFd7d7;
+  background-color: #ffd7d7;
   background-image: linear-gradient(to top, #fff, #ffd7d7);
   height: 95vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  justify-content: flex-start ;
+  justify-content: flex-start;
   align-items: center;
   margin: 0;
   padding: 0;
 }
 
-h1{
+h1 {
   text-align: center;
   color: #333;
 }
-h2{
+h2 {
   text-align: center;
   color: #555;
 }
-h3{
+h3 {
   text-align: center;
   color: #666;
 }
@@ -237,7 +248,7 @@ input[type="checkbox"] {
 }
 
 input.selected {
-color: var(--bs-orange);
+  color: var(--bs-orange);
 }
 
 select {
@@ -276,8 +287,8 @@ button[type="submit"]:hover {
 
 .boxcontent {
   display: flex;
-  justify-content: center ; /* Adjust as needed */
-  align-items: row ; /* Center items vertically if desired */
+  justify-content: center; /* Adjust as needed */
+  align-items: row; /* Center items vertically if desired */
   gap: 20px; /* Optional: Add some spacing between items */
 }
 
@@ -285,10 +296,10 @@ button[type="submit"]:hover {
   background-color: #eef;
   padding: 15px;
   border-radius: 4px;
-  display: flex ;
+  display: flex;
   flex-direction: column;
-  justify-content: center ;
-  
+  justify-content: center;
+
   flex: 1; /* Adjust as needed to control item width */
 }
 
@@ -298,7 +309,7 @@ button[type="submit"]:hover {
   padding: 10px;
   background-color: #eef;
   border-radius: 4px;
- }
+}
 
 .cat-picture img {
   max-width: 100%;
@@ -309,22 +320,22 @@ button[type="submit"]:hover {
 }
 
 .button1:hover {
-background-color: #ff5eff; /* Orange */
-color: black;
+  background-color: #ff5eff; /* Orange */
+  color: black;
 }
 
 .form-check-input:checked {
-background-color: #ff5eff;
-border-color: #213;
-opacity: 69%;
+  background-color: #ff5eff;
+  border-color: #213;
+  opacity: 69%;
 }
 
 /* Custom CSS to style the active button */
 /* This will override the default btn-outline-primary active state */
 .btn-group .btn.active {
-background-color: #ff5eff; /* Same as the default .btn-primary background */
-color: white;
-opacity: 69%;
+  background-color: #ff5eff; /* Same as the default .btn-primary background */
+  color: white;
+  opacity: 69%;
 }
 /* Media queries for mobile devices */
 
@@ -375,24 +386,24 @@ opacity: 69%;
     border-radius: 8px;
   }
 
-.button1:hover {
-background-color: #ff5eff; /* Orange */
-color: black;
-}
+  .button1:hover {
+    background-color: #ff5eff; /* Orange */
+    color: black;
+  }
 
-.form-check-input:checked {
-background-color: #ff5eff;
-border-color: #213;
-opacity: 69%;
-}
+  .form-check-input:checked {
+    background-color: #ff5eff;
+    border-color: #213;
+    opacity: 69%;
+  }
 
-/* Custom CSS to style the active button */
-/* This will override the default btn-outline-primary active state */
-.btn-group .btn.active {
-background-color: #ff5eff; /* Same as the default .btn-primary background */
-color: white;
-opacity: 69%;
-}
+  /* Custom CSS to style the active button */
+  /* This will override the default btn-outline-primary active state */
+  .btn-group .btn.active {
+    background-color: #ff5eff; /* Same as the default .btn-primary background */
+    color: white;
+    opacity: 69%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -441,58 +452,58 @@ opacity: 69%;
     border-radius: 8px;
   }
 
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
+  /* General Styles */
+  body {
+    font-family: "Arial", sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f4f4f9;
     color: #333;
-}
+  }
 
-.container {
+  .container {
     max-width: 600px;
     margin: auto;
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+  }
 
-h1 {
+  h1 {
     text-align: center;
     color: #333;
-}
+  }
 
-/* Form Styles */
-form {
+  /* Form Styles */
+  form {
     display: flex;
     flex-direction: column;
-}
+  }
 
-label {
+  label {
     margin-top: 10px;
     color: #777;
     font-weight: bold;
-}
+  }
 
-input[type="text"],
-textarea,
-select {
+  input[type="text"],
+  textarea,
+  select {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: calc(100% - 22px);
     margin-top: 5px;
     font-size: 16px;
-}
+  }
 
-select {
+  select {
     height: calc(100% - 15px);
-}
+  }
 
-/* Button Styles */
-button {
+  /* Button Styles */
+  button {
     background-color: #333;
     color: white;
     padding: 10px 20px;
@@ -503,111 +514,111 @@ button {
     width: 100%;
     margin-top: 20px;
     font-size: 18px;
-}
+  }
 
-button:hover {
+  button:hover {
     background-color: #555;
-}
+  }
 
-.button1 {
+  .button1 {
     transition-duration: 0.4s;
-}
+  }
 
-.button1:hover {
-    background-color: #FFC107; /* Orange */
+  .button1:hover {
+    background-color: #ffc107; /* Orange */
     color: black;
-}
+  }
 
-/* Polaroid Image Styles */
-div.polaroid {
+  /* Polaroid Image Styles */
+  div.polaroid {
     width: auto;
     height: 15vh;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     justify-content: flex;
     align-items: center;
-}
+  }
 
-img {
+  img {
     width: auto;
     height: 18vh;
-}
+  }
 
-div.container {
+  div.container {
     text-align: center;
     padding: 5px 10px;
-}
-.button1:hover {
-background-color: #ff5eff; /* Orange */
-color: black;
-}
+  }
+  .button1:hover {
+    background-color: #ff5eff; /* Orange */
+    color: black;
+  }
 
-.form-check-input:checked {
-background-color: #ff5eff;
-border-color: #213;
-opacity: 69%;
-}
+  .form-check-input:checked {
+    background-color: #ff5eff;
+    border-color: #213;
+    opacity: 69%;
+  }
 
-/* Custom CSS to style the active button */
-/* This will override the default btn-outline-primary active state */
-.btn-group .btn.active {
-background-color: #ff5eff; /* Same as the default .btn-primary background */
-color: white;
-opacity: 69%;
-}
+  /* Custom CSS to style the active button */
+  /* This will override the default btn-outline-primary active state */
+  .btn-group .btn.active {
+    background-color: #ff5eff; /* Same as the default .btn-primary background */
+    color: white;
+    opacity: 69%;
+  }
 
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
+  /* General Styles */
+  body {
+    font-family: "Arial", sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f4f4f9;
     color: #333;
-}
+  }
 
-.container {
+  .container {
     max-width: 600px;
     margin: auto;
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+  }
 
-h1 {
+  h1 {
     text-align: center;
     color: #333;
-}
+  }
 
-/* Form Styles */
-form {
+  /* Form Styles */
+  form {
     display: flex;
     flex-direction: column;
-}
+  }
 
-label {
+  label {
     margin-top: 10px;
     color: #777;
     font-weight: bold;
-}
+  }
 
-input[type="text"],
-textarea,
-select {
+  input[type="text"],
+  textarea,
+  select {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: calc(100% - 22px);
     margin-top: 5px;
     font-size: 16px;
-}
+  }
 
-select {
+  select {
     height: calc(100% - 15px);
-}
+  }
 
-/* Button Styles */
-button {
+  /* Button Styles */
+  button {
     background-color: #333;
     color: white;
     padding: 10px 20px;
@@ -618,58 +629,57 @@ button {
     width: 100%;
     margin-top: 20px;
     font-size: 18px;
-}
+  }
 
-button:hover {
+  button:hover {
     background-color: #555;
-}
+  }
 
-.button1 {
+  .button1 {
     transition-duration: 0.4s;
-}
+  }
 
-.button1:hover {
-    background-color: #FFC107; /* Orange */
+  .button1:hover {
+    background-color: #ffc107; /* Orange */
     color: black;
-}
+  }
 
-/* Polaroid Image Styles */
-div.polaroid {
+  /* Polaroid Image Styles */
+  div.polaroid {
     width: auto;
     height: 15vh;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     justify-content: flex;
     align-items: center;
-}
+  }
 
-img {
+  img {
     width: auto;
     height: 18vh;
-}
+  }
 
-div.container {
+  div.container {
     text-align: center;
     padding: 5px 10px;
-}
+  }
 
-.button1:hover {
-background-color: #ff5eff; /* Orange */
-color: black;
-}
+  .button1:hover {
+    background-color: #ff5eff; /* Orange */
+    color: black;
+  }
 
-.form-check-input:checked {
-background-color: #ff5eff;
-border-color: #213;
-opacity: 69%;
-}
+  .form-check-input:checked {
+    background-color: #ff5eff;
+    border-color: #213;
+    opacity: 69%;
+  }
 
-/* Custom CSS to style the active button */
-/* This will override the default btn-outline-primary active state */
-.btn-group .btn.active {
-background-color: #ff5eff; /* Same as the default .btn-primary background */
-color: white;
-opacity: 69%;
-}
-
+  /* Custom CSS to style the active button */
+  /* This will override the default btn-outline-primary active state */
+  .btn-group .btn.active {
+    background-color: #ff5eff; /* Same as the default .btn-primary background */
+    color: white;
+    opacity: 69%;
+  }
 }
