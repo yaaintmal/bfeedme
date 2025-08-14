@@ -5,7 +5,6 @@ description = "Mini Ordering System Using Flask & SQLite"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "convertapi>=2.0.0",
     "dotenv>=0.9.9",
     "flask>=3.1.1",
     "flask-sqlalchemy>=3.1.1",

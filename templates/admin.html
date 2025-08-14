@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - FeedMe Beta 0.1</title>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Bread</th>
+                <th>Sweets</th>
+                <th>Bars</th>
+                <th>Choco</th>
+                <th>Fruits</th>
+                <th>Vegetable</th>
+                <th>College Available</th>
+                <th>Comments</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, order in orders|enumerate %}
+            <tr>
+                <td>{{ order.timestamp }}</td>
+                <td>{{ order.bread }}</td>
+                <td>{{ order.sweets }}</td>
+                <td>{{ order.bars }}</td>
+                <td>{{ order.choco }}</td>
+                <td>{{ order.fruits }}</td>
+                <td>{{ order.vegetable }}</td>
+                <td>{{ order.collegeAvailable }}</td>
+                <td>{{ order.comments }}</td>
+                <td>
+                    <form method="post" action="{{ url_for('delete_order', id=order.id) }}">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
